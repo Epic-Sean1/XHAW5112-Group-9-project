@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Fees | Next Level Gaming</title>
+</head>
+<body>
+
+    <!-- Header: logo and navigation -->
+    <header>
+        <a href="index.html">
+            <img src="images/logo.png"
+                 alt="Next Level Gaming and Esports Arena Logo"
+                 width="110">
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="packages.html">Gaming Packages</a>
+            <a href="experiences.html">Experiences</a>
+            <a href="fees.html">Fees</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main content of the fees page -->
+    <main>
+
+        <section>
+            <h1>CALCULATE YOUR TOTAL FEES</h1>
+            <p>RACE TO YOUR QUOTE</p>
+            <p>Follow the track, select your packages and experiences,
+            enter your details and get your total quoted fee.</p>
+        </section>
+
+        <!-- Racing track showing the three steps -->
+        <section>
+            <div>
+                <p>START</p>
+
+                <div>
+                    <span>🏎️</span>
+                    <span>---------------------------------------------------</span>
+                    <span>🏁</span>
+                </div>
+
+                <!-- Checkpoint labels -->
+                <ul>
+                    <li>
+                        <strong>1</strong>
+                        <p>Details</p>
+                    </li>
+
+                     <li>
+                          <strong>2</strong>
+                          <p>Course</p>
+                    </li>
+
+                    <li>
+                            <strong>3</strong>
+                            <p>Review &amp; Calculate</p>
+                     </li>
+                </ul>
+            </div>
+        </section>
+
+        <form action="#" method="post">
+
+            <!-- Personal details-->
+            <fieldset id="personal-details">
+                <legend>1. Personal Details</legend>
+
+                <p>Enter your details so we can contact you about your booking.</p>
+
+                <p>
+                    <label for="full-name">Full Name:</label><br>
+                    <input type="text" id="full-name"
+                           name="full-name" required>
+                </p>
+
+                <p>
+                    <label for="phone">Phone Number:</label><br>
+                    <input type="tel" id="phone"
+                           name="phone" required>
+                </p>
+
+                <p>
+                    <label for="email">Email Address:</label><br>
+                    <input type="email" id="email"
+                           name="email" required>
+                </p>
+
+                <p>
+                    <label for="booking-type">Booking Type:</label><br>
+                    <select id="booking-type" name="booking-type" required>
+                        <option value="">Choose your booking type</option>
+                        <option value="individual">Individual</option>
+                        <option value="family">Family</option>
+                        <option value="school">School</option>
+                        <option value="gaming-club">Gaming Club</option>
+                        <option value="business">Business / Corporate</option>
+                        <option value="other">Other Group</option>
+                    </select>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="consultant"
+                           name="consultant" value="yes">
+                    <label for="consultant">
+                        I would like a consultant to contact me.
+                    </label>
+                </p>
+
+                <button type="button">
+                    NEXT 
+                </button>
+            </fieldset>
+
+            <!-- Select packages and experiences -->
+            <fieldset id="select-course">
+                <legend>2 Select Course</legend>
+                <p>Choose the gaming package and/or experience you would like to book.</p>
+
+                <h3>Gaming Packages</h3>
+                <p>
+                    <input type="checkbox" id="ultimate"
+                           name="offerings" value="ultimate">
+                    <label for="ultimate">Ultimate Gamer Pass - R 1 500</label>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="vip"
+                           name="offerings" value="vip">
+                    <label for="vip">VIP Gaming Experience - R 1 500</label>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="esports"
+                           name="offerings" value="esports">
+                    <label for="esports">Esports Training Package - R 1 500</label>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="birthday"
+                           name="offerings" value="birthday">
+                    <label for="birthday">Birthday Party Package - R 1 500</label>
+                </p>
+
+                <h3>Individual Experiences</h3>
+
+                <p>
+                    <input type="checkbox" id="vr"
+                           name="offerings" value="vr">
+                    <label for="vr">Virtual Reality Experience - R 750</label>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="racing"
+                           name="offerings" value="racing">
+                    <label for="racing">Racing Simulator Challenge - R 750</label>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="escape"
+                           name="offerings" value="escape">
+                    <label for="escape">Escape Room Challenge - R 750</label>
+                </p>
+
+                <!-- Back and Next buttons -->
+                <button type="button">
+                    BACK
+                </button>
+
+                <button type="button">
+                    NEXT
+                </button>
+            </fieldset>
+
+            <!--Review and calculate total fees -->
+            <fieldset id="total-quote">
+                <legend>3. Review &amp; Calculate</legend>
+
+                <p>
+                    Number of selected packages:
+                    <output id="selected-count">0</output>
+                </p>
+
+                <p>
+                    Subtotal:
+                    <output id="subtotal">R 0.00</output>
+                </p>
+
+                <p>
+                    Discount:
+                    <output id="discount">R 0.00</output>
+                </p>
+
+                <p>
+                    VAT (15%):
+                    <output id="vat">R 0.00</output>
+                </p>
+
+                <p>
+                    <strong>
+                        TOTAL QUOTED FEE:
+                        <output id="total">R 0.00</output>
+                    </strong>
+                </p>
+
+                <!-- Back button -->
+                <button type="button">
+                    BACK
+                </button>
+
+                <!-- Calculate button -->
+                <button type="button">
+                    CALCULATE
+                </button>
+
+                <!-- Submit request button -->
+                <button type="submit">
+                    SUBMIT REQUEST
+                </button>
+            </fieldset>
+
+        </form>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <section>
+            <h2>NEXT LEVEL</h2>
+            <p>GAMING &amp; ESPORTS ARENA</p>
+        </section>
+
+        <section>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+        </section>
+
+        <p>Johannesburg &bull; Established 2023</p>
+    </footer>
+
+</body>
+</html>
+
