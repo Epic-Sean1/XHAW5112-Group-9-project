@@ -1,9 +1,8 @@
 
-/* IMPORT JERSEY 15 FONT */
+/* ---------- GENERAL WEBSITE STYLING ---------- */
+
 @import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
 
-
-/* GENERAL */
 * {
     box-sizing: border-box;
 }
@@ -17,7 +16,8 @@ body {
 }
 
 
-/* HEADER */
+/* ---------- HEADER AND NAVIGATION ---------- */
+
 header {
     background-color: #fff;
     display: flex;
@@ -52,7 +52,8 @@ nav a.active {
 }
 
 
-/* HERO SECTION */
+/* ---------- HOME PAGE - HERO SECTION ---------- */
+
 .hero {
     position: relative;
     min-height: 600px;
@@ -67,7 +68,6 @@ nav a.active {
     color: #fff;
 }
 
-/* HERO IMAGE COVERS THE ENTIRE SECTION */
 .hero img {
     position: absolute;
     inset: 0;
@@ -80,21 +80,20 @@ nav a.active {
     z-index: 0;
 }
 
-/* DARK OVERLAY OVER THE IMAGE */
+/* Dark overlay over the hero image */
 .hero::before {
     content: "";
     position: absolute;
     inset: 0;
     background: linear-gradient(
         to right,
-        rgba(23, 19, 38, 0.90),
-        rgba(23, 19, 38, 0.60),
-        rgba(23, 19, 38, 0.30)
+        rgba(23, 19, 38, .90),
+        rgba(23, 19, 38, .60),
+        rgba(23, 19, 38, .30)
     );
     z-index: 1;
 }
 
-/* HERO TEXT */
 .hero p,
 .hero h1,
 .hero h2 {
@@ -103,7 +102,6 @@ nav a.active {
     max-width: 650px;
 }
 
-/* INTRODUCTION TEXT */
 .hero p:first-child {
     color: #f05ba8;
     font-size: 18px;
@@ -112,7 +110,6 @@ nav a.active {
     margin-bottom: 12px;
 }
 
-/* NEXT LEVEL */
 .hero h1 {
     font-family: 'Jersey 15', sans-serif;
     font-size: 90px;
@@ -120,7 +117,6 @@ nav a.active {
     letter-spacing: 2px;
 }
 
-/* GAMING & ESPORTS ARENA */
 .hero h2 {
     font-family: 'Jersey 15', sans-serif;
     color: #f05ba8;
@@ -129,7 +125,6 @@ nav a.active {
     margin: 5px 0 15px;
 }
 
-/* HERO DESCRIPTION */
 .hero p:nth-of-type(2) {
     font-family: Arial, sans-serif;
     font-size: 18px;
@@ -138,7 +133,8 @@ nav a.active {
 }
 
 
-/* HOME PAGE CARDS */
+/* ---------- HOME PAGE - GAMING CARDS ---------- */
+
 .home-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -147,13 +143,12 @@ nav a.active {
     background-color: #fff;
 }
 
-/* MAKE THE ENTIRE CARD CLICKABLE */
 .home-card {
     display: block;
     color: inherit;
     text-decoration: none;
     border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform .3s ease, box-shadow .3s ease;
 }
 
 .home-card article {
@@ -164,7 +159,6 @@ nav a.active {
     text-align: center;
 }
 
-/* CARD LEVEL TEXT */
 .home-card article p:first-child {
     color: #e94b9b;
     font-size: 13px;
@@ -172,34 +166,32 @@ nav a.active {
     letter-spacing: 2px;
 }
 
-/* CARD HEADINGS */
 .home-card article h3 {
     color: #39245f;
     font-size: 20px;
     line-height: 1.4;
 }
 
-/* CARD DESCRIPTION */
 .home-card article p:last-child {
     font-size: 14px;
     line-height: 1.6;
     color: #514b60;
 }
 
-/* CARD HOVER EFFECT */
 .home-card:hover {
     transform: scale(1.04);
-    box-shadow: 0 8px 20px rgba(57, 36, 95, 0.18);
+    box-shadow: 0 8px 20px rgba(57, 36, 95, .18);
 }
 
-/* KEYBOARD ACCESSIBILITY */
 .home-card:focus-visible {
     outline: 3px solid #e94b9b;
     outline-offset: 4px;
 }
 
 
-/* FOOTER */
+/* ---------- SHARED FOOTER ---------- */
+/* Used on all pages */
+
 footer {
     background-color: #24183c;
     color: #fff;
@@ -232,9 +224,111 @@ footer a:hover {
 }
 
 
-/* TABLET RESPONSIVENESS */
+/* ---------- ABOUT US PAGE ---------- */
+
+/* Make the About Us page fill the desktop screen */
+
+.about-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-page main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* About Us introduction and text */
+
+.about-intro {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    align-items: center;
+    gap: 30px;
+    padding: 45px 4%;
+    min-height: 450px;
+}
+
+.about-text {
+    max-width: 750px;
+}
+
+.about-text h1 {
+    font-family: 'Jersey 15', sans-serif;
+    font-size: 80px;
+    color: #39245f;
+    margin: 0 0 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #111;
+    margin-bottom: 25px;
+}
+
+
+/* About Us image */
+
+.about-image {
+    width: 100%;
+    height: 360px;
+    overflow: hidden;
+
+    /* Larger curve at the top than at the bottom */
+    border-radius: 200px 0 0 70px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Mission, Vision and Goals */
+
+.about-values {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 15px 4% 35px;
+    background-color: #f8f5fc;
+    border: 1px solid #dfd1ed;
+}
+
+.about-card {
+    text-align: center;
+    padding: 25px 20px;
+    border-right: 1px solid #dfd1ed;
+}
+
+.about-card:last-child {
+    border-right: none;
+}
+
+.about-card h2 {
+    color: #51249a;
+    font-size: 20px;
+    margin: 0 0 15px;
+}
+
+.about-card p {
+    color: #111;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* ---------- TABLET RESPONSIVENESS ---------- */
+
 @media (max-width: 900px) {
 
+    /* Shared navigation */
     header {
         flex-direction: column;
     }
@@ -245,6 +339,7 @@ footer a:hover {
         justify-content: center;
     }
 
+    /* Home page */
     .home-cards {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -256,12 +351,42 @@ footer a:hover {
     .hero h2 {
         font-size: 38px;
     }
+
+    /* About Us page */
+    .about-intro {
+        grid-template-columns: 1fr 1fr;
+        padding: 35px 4%;
+        gap: 20px;
+    }
+
+    .about-text h1 {
+        font-size: 50px;
+    }
+
+    .about-text p {
+        font-size: 15px;
+    }
+
+    .about-image {
+        height: 290px;
+        border-radius: 110px 0 0 30px;
+    }
+
+    .about-card {
+        padding: 20px 12px;
+    }
+
+    .about-card p {
+        font-size: 13px;
+    }
 }
 
 
-/* MOBILE RESPONSIVENESS */
+/* ---------- MOBILE RESPONSIVENESS ---------- */
+
 @media (max-width: 600px) {
 
+    /* Shared navigation */
     header {
         padding: 15px;
     }
@@ -276,6 +401,7 @@ footer a:hover {
         font-size: 14px;
     }
 
+    /* Home page */
     .hero {
         min-height: 500px;
         padding: 50px 25px;
@@ -302,6 +428,51 @@ footer a:hover {
         padding: 35px 20px;
     }
 
+    /* About Us page */
+    .about-intro {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+        gap: 20px;
+    }
+
+    .about-text h1 {
+        font-size: 45px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .about-image {
+        height: 250px;
+        border-radius: 100px 0 0 25px;
+    }
+
+    .about-values {
+        grid-template-columns: 1fr;
+        margin: 10px 20px 25px;
+    }
+
+    .about-card {
+        border-right: none;
+        border-bottom: 1px solid #dfd1ed;
+        padding: 20px;
+    }
+
+    .about-card:last-child {
+        border-bottom: none;
+    }
+
+    .about-card h2 {
+        font-size: 19px;
+    }
+
+    .about-card p {
+        font-size: 14px;
+    }
+
+    /* Shared footer */
     footer {
         flex-direction: column;
         text-align: center;
