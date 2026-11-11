@@ -4,52 +4,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIP Gaming Experience | Next Level Gaming</title>
+    <title>VIP Gaming Experience | Next Level Gaming & Esports Arena</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <!-- Header: logo and main navigation -->
+
+    <!--Shared website navigation-->
     <header>
-        <!-- Website logo -->
         <a href="index.html">
-            <img src="images/logo.jpg"
-                 alt="Next Level Gaming and Esports Arena Logo"
-                 width="110">
+            <img src="images/logo.jpg" alt="Next Level Gaming and Esports Arena">
         </a>
 
-        <!-- Links to the other website pages -->
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
-            <a href="packages.html">Gaming Packages</a>
+            <a href="packages.html" class="active">Gaming Packages</a>
             <a href="experiences.html">Experiences</a>
             <a href="fees.html">Fees</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
-    <main>
+    <!--VIP Gaming Experience details-->
+    <main class="package-detail-page">
 
-     <section>
+        <section class="package-detail-heading">
             <h1>VIP GAMING EXPERIENCE</h1>
             <p>The ultimate premium experience</p>
-            <p>Enjoy a high-end gaming experience with exclusive facilities, perfect for those who want the best.</p>
-            <h2>R 1 500</h2>
         </section>
 
-        <h2>Includes:</h2>
-        <ul>
-            <li>Premium gaming equipment</li>
-            <li>Food and drinks</li>
-            <li>Priority booking</li>
-            <li>Personal gaming assistant</li>
-        </ul>
+        <section class="package-detail-content">
 
-        <p><a href="packages.html">BACK</a></p>
-        <p><a href="fees.html">BOOK NOW</a></p>
-        
+            <!--Experience description and inclusions-->
+            <div class="package-detail-info">
+
+                <p class="package-description">
+                    Enjoy a high-end gaming experience with exclusive
+                    facilities, perfect for those who want the best.
+                </p>
+
+                <h2>Includes:</h2>
+
+                <ul>
+                    <li>Premium gaming equipment</li>
+                    <li>Food and drinks</li>
+                    <li>Priority booking</li>
+                    <li>Personal gaming assistant</li>
+                </ul>
+
+            </div>
+
+            <!--Experience fee-->
+            <div class="package-detail-visual">
+
+                <div class="package-detail-price">
+                    <strong>R 1 500</strong>
+                    <p>Package fee</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--Back and Book Now buttons-->
+        <section class="package-detail-actions">
+            <a href="packages.html" class="detail-back-button">← BACK</a>
+            <a href="fees.html" class="detail-book-button">BOOK NOW</a>
+        </section>
+
     </main>
 
-    <footer><p>Next Level Gaming &amp; Esports Arena</p></footer>
+    <!--Shared website footer-->
+    <footer>
+        <div>
+            <h2>NEXT LEVEL</h2>
+            <p>Gaming & Esports Arena</p>
+            <p>Established 2023</p>
+        </div>
+
+        <div>
+            <p>Johannesburg, South Africa</p>
+            <p>info@nextlevelgaming.co.za</p>
+        </div>
+
+        <div>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+
 </body>
 </html>
