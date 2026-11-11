@@ -1,6 +1,4 @@
-
 /*----------GENERAL WEBSITE STYLING----------*/
-
 @import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
 
 * {
@@ -16,7 +14,6 @@ body {
 }
 
 /*----------HEADER AND NAVIGATION----------*/
-
 header {
     background-color: #fff;
     display: flex;
@@ -51,7 +48,6 @@ nav a.active {
 }
 
 /*----------HOME PAGE - HERO SECTION----------*/
-
 .hero {
     position: relative;
     min-height: 600px;
@@ -79,7 +75,6 @@ nav a.active {
 }
 
 /*Dark overlay over the hero image*/
-
 .hero::before {
     content: "";
     position: absolute;
@@ -132,7 +127,6 @@ nav a.active {
 }
 
 /*----------HOME PAGE - GAMING CARDS----------*/
-
 .home-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -220,7 +214,6 @@ footer a:hover {
 }
 
 /*----------ABOUT US PAGE----------*/
-
 /*Make the About Us page fill the desktop screen*/
 .about-page {
     min-height: 100vh;
@@ -235,7 +228,6 @@ footer a:hover {
 }
 
 /*About Us introduction and text*/
-
 .about-intro {
     flex: 1;
     display: grid;
@@ -312,7 +304,6 @@ footer a:hover {
 }
 
 /*----------GAMING PACKAGES PAGE----------*/
-
 .packages-page {
     min-height: calc(100vh - 110px);
     display: flex;
@@ -321,7 +312,6 @@ footer a:hover {
 }
 
 /*Gaming Packages heading*/
-
 .packages-heading {
     text-align: center;
     padding: 10px 20px 8px;
@@ -424,12 +414,156 @@ footer a:hover {
     color: #fff;
 }
 
-/*----------TABLET RESPONSIVENESS----------*/
+/*----------PACKAGE DETAIL PAGES----------*/
+.package-detail-page {
+    min-height: calc(100vh - 110px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px 4% 15px;
+}
 
+/*Package detail heading and subtitle*/
+.package-detail-heading {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.package-detail-heading h1 {
+    font-family: 'Jersey 15', sans-serif;
+    font-size: 80px;
+    color: #292044;
+    margin: 0;
+}
+
+.package-detail-heading p {
+    font-size: 18px;
+    font-style: italic;
+    margin: 0 0 10px;
+    color: #514b60;
+}
+
+/*Package information layout*/
+.package-detail-content {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    align-items: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.package-detail-info {
+    max-width: 650px;
+}
+
+.package-description {
+    font-size: 19px;
+    line-height: 1.7;
+    color: #111;
+    margin: 5px 0 12px;
+}
+
+.package-detail-info h2 {
+    color: #51249a;
+    font-size: 25px;
+    margin: 10px 0 5px;
+}
+
+.package-detail-info ul {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #111;
+    margin: 0;
+    padding-left: 25px;
+}
+
+/*Package image and fee*/
+.package-detail-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.package-detail-image {
+    width: 240px;
+    height: 200px;
+    object-fit: contain;
+    display: block;
+    margin: 0;
+}
+
+.package-detail-price {
+    border: 2px solid #51249a;
+    border-radius: 8px;
+    padding: 5px 25px;
+    min-width: 150px;
+    text-align: center;
+}
+
+.package-detail-price strong {
+    color: #51249a;
+    font-size: 30px;
+}
+
+.package-detail-price p {
+    color: #292044;
+    font-size: 16px;
+    margin: 3px 0 0;
+}
+
+/*Back and Book Now buttons*/
+.package-detail-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: auto;
+    padding: 0 2px;
+}
+
+.detail-back-button,
+.detail-book-button {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 13px 32px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.detail-back-button {
+    color: #51249a;
+    background-color: #f8f2fc;
+    border: 1px solid #51249a;
+}
+
+.detail-book-button {
+    color: #fff;
+    background-color: #51249a;
+    border: 1px solid #51249a;
+}
+
+.detail-back-button:hover {
+    color: #fff;
+    background-color: #51249a;
+}
+
+.detail-book-button:hover {
+    color: #fff;
+    background-color: #e94b9b;
+    border-color: #e94b9b;
+}
+
+/*----------TABLET RESPONSIVENESS----------*/
 @media (max-width: 900px) {
 
     /*Shared navigation*/
-
     header {
         flex-direction: column;
     }
@@ -441,7 +575,6 @@ footer a:hover {
     }
 
     /*Home page*/
-
     .home-cards {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -455,7 +588,6 @@ footer a:hover {
     }
 
     /*About Us page*/
-
     .about-intro {
         grid-template-columns: 1fr 1fr;
         padding: 35px 4%;
@@ -484,7 +616,6 @@ footer a:hover {
     }
 
     /*Gaming Packages page*/
-
     .packages-heading h1 {
         font-size: 50px;
     }
@@ -511,14 +642,41 @@ footer a:hover {
         width: 120px;
         height: 120px;
     }
+
+    /*Package detail pages*/
+    .package-detail-heading h1 {
+        font-size: 50px;
+    }
+
+    .package-detail-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .package-description {
+        font-size: 16px;
+    }
+
+    .package-detail-info ul {
+        font-size: 16px;
+    }
+
+    .package-detail-image {
+        width: 190px;
+        height: 170px;
+    }
+
+    .package-detail-actions {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: auto;
+    }
 }
 
 /*----------MOBILE RESPONSIVENESS----------*/
-
 @media (max-width: 600px) {
 
     /*Shared navigation*/
-
     header {
         padding: 15px;
     }
@@ -534,7 +692,6 @@ footer a:hover {
     }
 
     /*Home page*/
-
     .hero {
         min-height: 500px;
         padding: 50px 25px;
@@ -562,7 +719,6 @@ footer a:hover {
     }
 
     /*About Us page*/
-
     .about-intro {
         grid-template-columns: 1fr;
         padding: 30px 20px;
@@ -607,7 +763,6 @@ footer a:hover {
     }
 
     /*Gaming Packages page*/
-
     .packages-heading h1 {
         font-size: 45px;
     }
@@ -637,6 +792,59 @@ footer a:hover {
     .package-icon {
         width: 125px;
         height: 125px;
+    }
+
+    /*Package detail pages*/
+    .package-detail-page {
+        padding: 10px 20px 15px;
+    }
+
+    .package-detail-heading h1 {
+        font-size: 45px;
+    }
+
+    .package-detail-heading p {
+        font-size: 16px;
+    }
+
+    .package-detail-content {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .package-description {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    .package-detail-info h2 {
+        font-size: 22px;
+    }
+
+    .package-detail-info ul {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .package-detail-image {
+        width: 190px;
+        height: 160px;
+    }
+
+    .package-detail-actions {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15px;
+        padding: 0;
+        gap: 10px;
+    }
+
+    .detail-back-button,
+    .detail-book-button {
+        padding: 11px 25px;
+        font-size: 14px;
     }
 
     /*Shared footer*/
