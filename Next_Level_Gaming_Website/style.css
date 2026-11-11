@@ -1,5 +1,5 @@
 
-/* ---------- GENERAL WEBSITE STYLING ---------- */
+/*----------GENERAL WEBSITE STYLING----------*/
 
 @import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
 
@@ -15,8 +15,7 @@ body {
     background-color: #fff;
 }
 
-
-/* ---------- HEADER AND NAVIGATION ---------- */
+/*----------HEADER AND NAVIGATION----------*/
 
 header {
     background-color: #fff;
@@ -51,8 +50,7 @@ nav a.active {
     color: #e94b9b;
 }
 
-
-/* ---------- HOME PAGE - HERO SECTION ---------- */
+/*----------HOME PAGE - HERO SECTION----------*/
 
 .hero {
     position: relative;
@@ -80,7 +78,8 @@ nav a.active {
     z-index: 0;
 }
 
-/* Dark overlay over the hero image */
+/*Dark overlay over the hero image*/
+
 .hero::before {
     content: "";
     position: absolute;
@@ -132,8 +131,7 @@ nav a.active {
     color: #fff;
 }
 
-
-/* ---------- HOME PAGE - GAMING CARDS ---------- */
+/*----------HOME PAGE - GAMING CARDS----------*/
 
 .home-cards {
     display: grid;
@@ -188,10 +186,8 @@ nav a.active {
     outline-offset: 4px;
 }
 
-
-/* ---------- SHARED FOOTER ---------- */
-/* Used on all pages */
-
+/*----------SHARED FOOTER----------*/
+/*Used on all pages*/
 footer {
     background-color: #24183c;
     color: #fff;
@@ -223,11 +219,9 @@ footer a:hover {
     color: #f05ba8;
 }
 
+/*----------ABOUT US PAGE----------*/
 
-/* ---------- ABOUT US PAGE ---------- */
-
-/* Make the About Us page fill the desktop screen */
-
+/*Make the About Us page fill the desktop screen*/
 .about-page {
     min-height: 100vh;
     display: flex;
@@ -240,7 +234,7 @@ footer a:hover {
     flex-direction: column;
 }
 
-/* About Us introduction and text */
+/*About Us introduction and text*/
 
 .about-intro {
     flex: 1;
@@ -270,15 +264,11 @@ footer a:hover {
     margin-bottom: 25px;
 }
 
-
-/* About Us image */
-
+/*About Us image*/
 .about-image {
     width: 100%;
     height: 360px;
     overflow: hidden;
-
-    /* Larger curve at the top than at the bottom */
     border-radius: 200px 0 0 70px;
 }
 
@@ -289,9 +279,7 @@ footer a:hover {
     display: block;
 }
 
-
-/* Mission, Vision and Goals */
-
+/*Mission, Vision and Goals*/
 .about-values {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -323,12 +311,125 @@ footer a:hover {
     margin: 0;
 }
 
+/*----------GAMING PACKAGES PAGE----------*/
 
-/* ---------- TABLET RESPONSIVENESS ---------- */
+.packages-page {
+    min-height: calc(100vh - 110px);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+/*Gaming Packages heading*/
+
+.packages-heading {
+    text-align: center;
+    padding: 10px 20px 8px;
+}
+
+.packages-heading h1 {
+    font-family: 'Jersey 15', sans-serif;
+    font-size: 80px;
+    color: #292044;
+    margin: 0;
+}
+
+.packages-heading p {
+    font-size: 14px;
+    color: #292044;
+    margin: 0;
+}
+
+/*Package cards layout*/
+.packages-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    padding: 0 1.4%;
+    align-items: stretch;
+}
+
+/*Individual package cards*/
+.package-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    background-color: #fdfbfe;
+    border: 1px solid #f0e6f5;
+    border-radius: 12px;
+    padding: 18px 12px 12px;
+    min-height: 380px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*Package card hover movement*/
+.package-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 22px rgba(57, 36, 95, 0.18);
+}
+
+/*Package names*/
+.package-card h2 {
+    color: #51249a;
+    font-size: 20px;
+    line-height: 1.25;
+    margin: 0 0 5px;
+}
+
+/*Gaming package icons*/
+.package-icon {
+    width: 155px;
+    height: 155px;
+    object-fit: contain;
+    display: block;
+    margin: 15px auto 15px;
+}
+
+/*Package descriptions*/
+.package-card p {
+    color: #111;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: auto;
+    margin-bottom: 18px;
+}
+
+/*Package prices*/
+.package-price {
+    color: #51249a;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+/*View Details buttons*/
+.package-button {
+    display: block;
+    width: 85%;
+    padding: 10px 5px;
+    border: 1px solid #51249a;
+    border-radius: 30px;
+    color: #51249a;
+    background-color: #f8f2fc;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.package-button:hover {
+    background-color: #51249a;
+    color: #fff;
+}
+
+/*----------TABLET RESPONSIVENESS----------*/
 
 @media (max-width: 900px) {
 
-    /* Shared navigation */
+    /*Shared navigation*/
+
     header {
         flex-direction: column;
     }
@@ -339,7 +440,8 @@ footer a:hover {
         justify-content: center;
     }
 
-    /* Home page */
+    /*Home page*/
+
     .home-cards {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -352,7 +454,8 @@ footer a:hover {
         font-size: 38px;
     }
 
-    /* About Us page */
+    /*About Us page*/
+
     .about-intro {
         grid-template-columns: 1fr 1fr;
         padding: 35px 4%;
@@ -379,14 +482,43 @@ footer a:hover {
     .about-card p {
         font-size: 13px;
     }
+
+    /*Gaming Packages page*/
+
+    .packages-heading h1 {
+        font-size: 50px;
+    }
+
+    .packages-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 10px 4%;
+    }
+
+    .package-card {
+        min-height: 360px;
+    }
+
+    .package-card h2 {
+        font-size: 20px;
+    }
+
+    .package-card p {
+        font-size: 15px;
+    }
+
+    .package-icon {
+        width: 120px;
+        height: 120px;
+    }
 }
 
-
-/* ---------- MOBILE RESPONSIVENESS ---------- */
+/*----------MOBILE RESPONSIVENESS----------*/
 
 @media (max-width: 600px) {
 
-    /* Shared navigation */
+    /*Shared navigation*/
+
     header {
         padding: 15px;
     }
@@ -401,7 +533,8 @@ footer a:hover {
         font-size: 14px;
     }
 
-    /* Home page */
+    /*Home page*/
+
     .hero {
         min-height: 500px;
         padding: 50px 25px;
@@ -428,7 +561,8 @@ footer a:hover {
         padding: 35px 20px;
     }
 
-    /* About Us page */
+    /*About Us page*/
+
     .about-intro {
         grid-template-columns: 1fr;
         padding: 30px 20px;
@@ -472,7 +606,40 @@ footer a:hover {
         font-size: 14px;
     }
 
-    /* Shared footer */
+    /*Gaming Packages page*/
+
+    .packages-heading h1 {
+        font-size: 45px;
+    }
+
+    .packages-heading p {
+        font-size: 14px;
+    }
+
+    .packages-grid {
+        grid-template-columns: 1fr;
+        padding: 10px 20px;
+        gap: 15px;
+    }
+
+    .package-card {
+        min-height: 340px;
+    }
+
+    .package-card h2 {
+        font-size: 20px;
+    }
+
+    .package-card p {
+        font-size: 15px;
+    }
+
+    .package-icon {
+        width: 125px;
+        height: 125px;
+    }
+
+    /*Shared footer*/
     footer {
         flex-direction: column;
         text-align: center;

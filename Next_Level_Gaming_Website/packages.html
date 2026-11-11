@@ -1,27 +1,31 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gaming Packages | Next Level Gaming</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Header: logo and main navigation -->
+
+    <!-- ---------- HEADER AND NAVIGATION ---------- -->
+
     <header>
 
         <!-- Website logo -->
         <a href="index.html">
             <img src="images/logo.jpg"
-                 alt="Next Level Gaming and Esports Arena Logo"
-                 width="110">
+                 alt="Next Level Gaming and Esports Arena Logo">
         </a>
 
-        <!-- Links to the other website pages -->
+        <!-- Main navigation -->
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
-            <a href="packages.html">Gaming Packages</a>
+            <a href="packages.html" class="active">Gaming Packages</a>
             <a href="experiences.html">Experiences</a>
             <a href="fees.html">Fees</a>
             <a href="contact.html">Contact</a>
@@ -29,42 +33,134 @@
 
     </header>
 
-    <main>
-        <h1>GAMING PACKAGES</h1>
-        <p>Choose the perfect package for your gaming style</p>
 
-        <article>
-            <h2>Ultimate Gamer Pass</h2>
-            <p>Full access to gaming station, events and more.</p>
-            <p><strong>R 1 500</strong></p>
-            <a href="ultimate_gamer_pass.html">View Details</a>
-        </article>
+    <!-- ---------- GAMING PACKAGES PAGE ---------- -->
 
-        <article>
-            <h2>VIP Gaming Experience</h2>
-            <p>Premium lounge, private sessions and others.</p>
-            <p><strong>R 1 500</strong></p>
-            <a href="vip_gaming_experience.html">View Details</a>
-        </article>
+    <main class="packages-page">
 
-        <article>
-            <h2>Esports Training Package</h2>
-            <p>Improve your competitive gaming with professional coaching and training.</p>
-            <p><strong>R 1 500</strong></p>
-            <a href="esports_training.html">View Details</a>
-        </article>
+        <!-- Page heading -->
+        <section class="packages-heading">
+            <h1>GAMING PACKAGES</h1>
+            <p>Choose the perfect package for your gaming style</p>
+        </section>
 
-        <article>
-            <h2>Birthday Party Package</h2>
-            <p>Celebrate your special day with a gaming party.</p>
-            <p><strong>R 1 500</strong></p>
-            <a href="birthday_party.html">View Details</a>
-        </article>
+
+        <!-- Gaming package cards -->
+        <section class="packages-grid">
+
+
+            <!-- Ultimate Gamer Pass -->
+            <article class="package-card">
+
+                <h2>ULTIMATE GAMER PASS</h2>
+
+                <!-- Gaming controller icon -->
+                <img src="images/gamer_icon.png"
+                     alt="Gaming controller icon"
+                     class="package-icon">
+
+                <p>Full access to gaming station, events and more.</p>
+
+                <strong class="package-price">R 1 500</strong>
+
+                <a href="ultimate_gamer_pass.html" class="package-button">
+                    View Details
+                </a>
+
+            </article>
+
+
+            <!-- VIP Gaming Experience -->
+            <article class="package-card">
+
+                <h2>VIP GAMING EXPERIENCE</h2>
+
+                <!-- VIP crown gaming icon -->
+                <img src="images/vip_icon.png"
+                     alt="VIP gaming crown icon"
+                     class="package-icon">
+
+                <p>Premium lounge, private sessions and others.</p>
+
+                <strong class="package-price">R 1 500</strong>
+
+                <a href="vip_gaming_experience.html" class="package-button">
+                    View Details
+                </a>
+
+            </article>
+
+
+            <!-- Esports Training Package -->
+            <article class="package-card">
+
+                <h2>Esports Training Packages</h2>
+
+                <!-- Esports trophy icon -->
+                <img src="images/trophy_icon.png"
+                     alt="Esports trophy icon"
+                     class="package-icon">
+
+                <p>Improve your competitive gaming with professional coaching and training.</p>
+
+                <strong class="package-price">R 1 500</strong>
+
+                <a href="esports_training.html" class="package-button">
+                    View Details
+                </a>
+
+            </article>
+
+
+            <!-- Birthday Party Package -->
+            <article class="package-card">
+
+                <h2>Birthday Party Package</h2>
+
+                <!-- Birthday gaming icon -->
+                <img src="images/birthday_icon.png"
+                     alt="Birthday gaming controller icon"
+                     class="package-icon">
+
+                <p>Celebrate your special day with a gaming party.</p>
+
+                <strong class="package-price">R 1 500</strong>
+
+                <a href="birthday_party.html" class="package-button">
+                    View Details
+                </a>
+
+            </article>
+
+
+        </section>
 
     </main>
 
+
+    <!-- ---------- SHARED FOOTER ---------- -->
+
     <footer>
-        <p>Next Level Gaming &amp; Esports Arena</p>
+
+        <!-- Website branding -->
+        <div class="footer-brand">
+            <h2>NEXT LEVEL</h2>
+            <p>GAMING &amp; ESPORTS ARENA</p>
+        </div>
+
+        <!-- Social media links -->
+        <div class="footer-socials">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+        </div>
+
+        <!-- Location and establishment -->
+        <div class="footer-location">
+            <p>Johannesburg &nbsp; • &nbsp; Established 2023</p>
+        </div>
+
     </footer>
+
 </body>
 </html>
