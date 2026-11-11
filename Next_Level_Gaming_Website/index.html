@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Next Level Gaming & Esports Arena</title>
+
+    <!-- Linking CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -13,14 +16,14 @@
 
         <!-- Website logo -->
         <a href="index.html">
-            <img src="images/logo.jpg"
+            <img src="Images/logo.jpg"
                  alt="Next Level Gaming and Esports Arena Logo"
                  width="110">
         </a>
 
         <!-- Main navigation menu -->
         <nav>
-            <a href="index.html">Home</a>
+            <a href="index.html" class="active">Home</a>
             <a href="about.html">About Us</a>
             <a href="packages.html">Gaming Packages</a>
             <a href="experiences.html">Experiences</a>
@@ -33,8 +36,8 @@
     <!-- Main content of the home page -->
     <main>
 
-        <!-- Hero section: introduction and main gaming image -->
-        <section>
+        <!-- Hero section -->
+        <section class="hero">
 
             <p>PLAY. COMPETE. CONNECT</p>
 
@@ -48,53 +51,57 @@
             </p>
 
             <!-- Main gaming arena image -->
-            <img src="images/hero.jpg"
+            <img src="Images/hero.png"
                  alt="Gaming computers and neon lights inside a gaming arena">
 
         </section>
 
-        <!-- Four main options displayed as cards -->
-        <section>
+        <!-- Four main options displayed as clickable cards -->
+        <section class="home-cards">
 
             <!-- Level 01: Gaming Packages -->
-            <article>
-                <p>LEVEL 01</p>
-                <h3>GAMING<br>PACKAGES</h3>
-                <p>
-                    Choose a package for a full gaming or event experience.
-                </p>
-                <a href="packages.html">Explore Gaming Packages</a>
-            </article>
+            <a href="packages.html" class="home-card">
+                <article>
+                    <p>LEVEL 01</p>
+                    <h3>GAMING<br>PACKAGES</h3>
+                    <p>
+                        Choose a package for a full gaming or event experience.
+                    </p>
+                </article>
+            </a>
 
             <!-- Level 02: Individual Experiences -->
-            <article>
-                <p>LEVEL 02</p>
-                <h3>INDIVIDUAL<br>EXPERIENCES</h3>
-                <p>
-                    Try VR, racing simulator and escape room challenges.
-                </p>
-                <a href="experiences.html">Explore Experiences</a>
-            </article>
+            <a href="experiences.html" class="home-card">
+                <article>
+                    <p>LEVEL 02</p>
+                    <h3>INDIVIDUAL<br>EXPERIENCES</h3>
+                    <p>
+                        Try VR, racing simulator and escape room challenges.
+                    </p>
+                </article>
+            </a>
 
             <!-- Level 03: Calculate Total Fees -->
-            <article>
-                <p>LEVEL 03</p>
-                <h3>CALCULATE<br>TOTAL FEES</h3>
-                <p>
-                    Select the services you are interested in and prepare a fee estimate.
-                </p>
-                <a href="fees.html">Calculate Fees</a>
-            </article>
+            <a href="fees.html" class="home-card">
+                <article>
+                    <p>LEVEL 03</p>
+                    <h3>CALCULATE<br>TOTAL FEES</h3>
+                    <p>
+                        Select the services you are interested in and prepare a fee estimate.
+                    </p>
+                </article>
+            </a>
 
             <!-- Level 04: Contact Us -->
-            <article>
-                <p>LEVEL 04</p>
-                <h3>CONTACT<br>US</h3>
-                <p>
-                    Contact us with your questions and booking enquiries.
-                </p>
-                <a href="contact.html">Contact Us</a>
-            </article>
+            <a href="contact.html" class="home-card">
+                <article>
+                    <p>LEVEL 04</p>
+                    <h3>CONTACT<br>US</h3>
+                    <p>
+                        Contact us with your questions and booking enquiries.
+                    </p>
+                </article>
+            </a>
 
         </section>
 
@@ -108,7 +115,7 @@
             <p>GAMING &amp; ESPORTS ARENA</p>
         </section>
 
-        <!-- Social media links will be added when the official links are available -->
+        <!-- Social media links -->
         <section>
             <a href="#">Facebook</a>
             <a href="#">Instagram</a>
