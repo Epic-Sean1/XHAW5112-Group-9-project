@@ -1,4 +1,3 @@
-
 /*----------GENERAL WEBSITE STYLING----------*/
 @import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
 
@@ -48,7 +47,7 @@ nav a.active {
     color: #e94b9b;
 }
 
-/*----------HOME PAGE - HERO SECTION----------*/
+/*----------HOME PAGE, HERO SECTION----------*/
 .hero {
     position: relative;
     min-height: 600px;
@@ -518,6 +517,33 @@ footer a:hover {
 }
 
 .experience-button:hover {
+    background-color: #51249a;
+    color: #fff;
+}
+
+/*----------PACKAGE DETAIL PAGES----------*/
+.package-detail-page {
+    min-height: calc(100vh - 110px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px 4% 15px;
+}
+
+/*Package detail heading and subtitle*/
+.package-detail-heading {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.package-detail-heading h1 {
+    font-family: 'Jersey 15', sans-serif;
+    font-size: 80px;
+    color: #292044;
+    margin: 0;
+}
+
     background-color: #51249a;
     color: #fff;
 }
@@ -1028,5 +1054,527 @@ footer a:hover {
         flex-direction: column;
         text-align: center;
         gap: 15px;
+    }
+}
+
+/*----------FEES PAGE----------*/
+
+.fees-page {
+    min-height: calc(100vh - 110px);
+    display: flex;
+    flex-direction: column;
+    padding: 10px 5% 30px;
+}
+
+/*Fees page heading - same heading font used across the website*/
+.fees-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 12px;
+}
+
+.fees-heading h1 {
+    font-family: 'Jersey 15', sans-serif;
+    font-size: 60px;
+    color: #292044;
+    margin: 0;
+}
+
+.fees-heading h2 {
+    color: #39245f;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 5px;
+}
+
+.fees-heading p {
+    color: #292044;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/*Racing track progress tracker*/
+.racing-track {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    max-width: 650px;
+    min-height: 75px;
+    margin: 0 auto 20px;
+    padding: 10px 18px 5px;
+    background-color: #393642;
+    border-radius: 50px;
+}
+
+/*Dotted racing track line*/
+.track-line {
+    position: absolute;
+    top: 34px;
+    left: 10%;
+    width: 80%;
+    border-top: 4px dashed #aaa5b5;
+}
+
+/*Numbered checkpoints*/
+.track-checkpoint {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.track-checkpoint span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-color: #777383;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.track-checkpoint p {
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 2px 0 0;
+    text-transform: lowercase;
+}
+
+.track-checkpoint.active span,
+.track-checkpoint.completed span {
+    background-color: #51249a;
+    border-color: #fff;
+}
+
+/*Booking form sections*/
+#fees-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fee-step {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 12px 15px;
+    background-color: #fdfbfe;
+    border: 1px solid #f0e6f5;
+    border-radius: 12px;
+}
+
+.fee-step[hidden] {
+    display: none;
+}
+
+/*Step headings*/
+.step-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.step-heading > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #51249a;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.step-heading h2 {
+    color: #51249a;
+    font-family: Arial, sans-serif;
+    font-size: 21px;
+    margin: 2px 0 3px;
+}
+
+.step-heading p {
+    color: #888;
+    font-size: 14px;
+    margin: 0;
+}
+
+/*Personal details form layout*/
+.personal-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 15px;
+    padding: 0 35px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    color: #111;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    height: 38px;
+    padding: 7px 10px;
+    border: 1px solid #e8e3ed;
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: 1px solid #51249a;
+}
+
+/*Consultant checkbox*/
+.consultant-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 12px 35px 5px;
+}
+
+.consultant-option input {
+    width: 21px;
+    height: 21px;
+    accent-color: #51249a;
+}
+
+.consultant-option label {
+    color: #51249a;
+    font-size: 14px;
+}
+
+/*Course selection layout*/
+.course-selection-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 0 35px;
+}
+
+.course-category h3 {
+    color: #39245f;
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    margin: 0 0 7px;
+}
+
+/*Individual course selection cards*/
+.course-option {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 41px;
+    margin-bottom: 6px;
+    padding: 6px 8px;
+    border: 1px solid #d8d2dc;
+    border-radius: 6px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.course-option:hover {
+    border-color: #51249a;
+    background-color: #f8f2fc;
+}
+
+.course-option input {
+    appearance: none;
+    flex-shrink: 0;
+    width: 21px;
+    height: 21px;
+    margin: 0;
+    border: 1px solid #51249a;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.course-option input:checked {
+    background-color: #51249a;
+    box-shadow: inset 0 0 0 4px #fff;
+}
+
+.course-option span {
+    flex: 1;
+    color: #111;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.course-option strong {
+    padding: 4px 7px;
+    border-radius: 5px;
+    background-color: #d9c5f2;
+    color: #39245f;
+    font-size: 14px;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+/*Back and Next buttons*/
+.step-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0 35px;
+}
+
+.next-button,
+.back-button,
+.calculate-button,
+.submit-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #51249a;
+    border-radius: 25px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.next-button,
+.calculate-button,
+.submit-button {
+    background-color: #51249a;
+    color: #fff;
+}
+
+.back-button {
+    background-color: #f8f2fc;
+    color: #51249a;
+}
+
+.next-button:hover,
+.calculate-button:hover,
+.submit-button:hover {
+    background-color: #e94b9b;
+    border-color: #e94b9b;
+}
+
+.back-button:hover {
+    background-color: #51249a;
+    color: #fff;
+}
+
+/*Quotation table*/
+.quote-table {
+    margin: 0 35px;
+    overflow: hidden;
+    border: 1px solid #d8d2dc;
+    border-radius: 10px;
+}
+
+.quote-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 28px;
+    padding: 3px 9px;
+    border-bottom: 1px solid #d8d2dc;
+    background-color: #fff;
+    color: #111;
+    font-size: 14px;
+}
+
+.quote-row output {
+    text-align: right;
+}
+
+.quote-total {
+    min-height: 30px;
+    background-color: #d0c2e8;
+    border-bottom: none;
+    color: #51249a;
+    font-size: 15px;
+}
+
+.quote-total strong,
+.quote-total output {
+    font-weight: bold;
+}
+
+/*Calculate button*/
+.calculate-button {
+    margin: 10px 35px 0;
+    padding: 9px 15px;
+    font-size: 11px;
+}
+
+/*----------FEES PAGE RESPONSIVENESS----------*/
+
+@media (max-width: 900px) {
+
+    .fees-page {
+        padding: 15px 4%;
+    }
+
+    .fees-heading h1 {
+        font-size: 48px;
+    }
+
+    .racing-track {
+        width: 90%;
+    }
+
+    .fee-step {
+        max-width: 100%;
+    }
+
+    .personal-details-grid,
+    .course-selection-grid {
+        padding: 0 15px;
+    }
+
+    .consultant-option {
+        margin-left: 15px;
+    }
+
+    .step-buttons {
+        padding: 0 15px;
+    }
+
+    .quote-table {
+        margin: 0 15px;
+    }
+
+    .calculate-button {
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .fees-page {
+        padding: 15px 12px 25px;
+    }
+
+    .fees-heading h1 {
+        font-size: 36px;
+    }
+
+    .fees-heading h2 {
+        font-size: 16px;
+    }
+
+    .fees-heading p {
+        font-size: 13px;
+    }
+
+    .racing-track {
+        width: 100%;
+        min-height: 70px;
+        padding: 8px 12px 4px;
+    }
+
+    .track-checkpoint span {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+
+    .track-line {
+        top: 29px;
+    }
+
+    .track-checkpoint p {
+        font-size: 10px;
+    }
+
+    .fee-step {
+        padding: 12px 10px;
+    }
+
+    .step-heading h2 {
+        font-size: 18px;
+    }
+
+    .step-heading p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .personal-details-grid {
+        grid-template-columns: 1fr;
+        padding: 0 5px;
+    }
+
+    .form-group label,
+    .consultant-option label {
+        font-size: 13px;
+    }
+
+    .consultant-option {
+        margin: 12px 5px;
+    }
+
+    .course-selection-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 0 5px;
+    }
+
+    .course-category h3 {
+        font-size: 16px;
+    }
+
+    .course-option {
+        min-height: 42px;
+    }
+
+    .course-option span,
+    .course-option strong {
+        font-size: 13px;
+    }
+
+    .step-buttons {
+        padding: 0 5px;
+    }
+
+    .quote-table {
+        margin: 0 5px;
+    }
+
+    .quote-row {
+        font-size: 12px;
+    }
+
+    .calculate-button {
+        margin-left: 5px;
+    }
+
+    .next-button,
+    .back-button,
+    .calculate-button,
+    .submit-button {
+        padding: 9px 15px;
+        font-size: 10px;
     }
 }

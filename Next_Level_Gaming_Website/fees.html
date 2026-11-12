@@ -1,13 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculate Fees | Next Level Gaming</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header: logo and navigation -->
+<!-- Shared Header and Navigation -->
     <header>
         <a href="index.html">
             <img src="images/logo.jpg"
@@ -20,231 +22,287 @@
             <a href="about.html">About Us</a>
             <a href="packages.html">Gaming Packages</a>
             <a href="experiences.html">Experiences</a>
-            <a href="fees.html">Fees</a>
+            <a href="fees.html" class="active">Fees</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
-    <!-- Main content of the fees page -->
-    <main>
+<!-- Main Fees Page -->
+    <main class="fees-page">
 
-        <section>
+        <!-- Fees Page Heading -->
+        <section class="fees-heading">
             <h1>CALCULATE YOUR TOTAL FEES</h1>
-            <p>RACE TO YOUR QUOTE</p>
-            <p>Follow the track, select your packages and experiences,
-            enter your details and get your total quoted fee.</p>
+            <h2>RACE TO YOUR QUOTE</h2>
+            <p>
+                Follow the track, select your packages and experiences,
+                enter your details and get your total quoted fee.
+            </p>
         </section>
 
-        <!-- Racing track showing the three steps -->
-        <section>
-            <div>
-                <p>START</p>
+        <!-- Racing Track Progress Tracker -->
+        <section class="racing-track">
 
-                <div>
-                    
-                    <span>---------------------------------------------------</span>
+            <div class="track-line"></div>
+
+            <div class="track-checkpoint active" data-step="1">
+                <span>1</span>
+                <p>details</p>
+            </div>
+
+            <div class="track-checkpoint" data-step="2">
+                <span>2</span>
+                <p>course</p>
+            </div>
+
+            <div class="track-checkpoint" data-step="3">
+                <span>3</span>
+                <p>quote</p>
+            </div>
+
+        </section>
+
+        <!-- Booking Form -->
+        <form id="fees-form" action="#" method="post">
+
+            <!-- STEP 1: PERSONAL DETAILS -->
+            <section class="fee-step active" id="personal-details">
+
+                <div class="step-heading">
+                    <span>1</span>
+                    <div>
+                        <h2>Personal Details</h2>
+                        <p>Enter your details so we can contact you about your booking.</p>
+                    </div>
+                </div>
+
+                <div class="personal-details-grid">
+
+                    <div class="form-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name"
+                               name="full-name"
+                               placeholder="Enter full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone"
+                               name="phone"
+                               placeholder="Enter phone number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email"
+                               name="email"
+                               placeholder="Enter email address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="booking-type">Booking Type</label>
+                        <select id="booking-type" name="booking-type" required>
+                            <option value="">Select booking type</option>
+                            <option value="individual">Individual</option>
+                            <option value="family">Family</option>
+                            <option value="school">School</option>
+                            <option value="gaming-club">Gaming Club</option>
+                            <option value="business">Business / Corporate</option>
+                            <option value="other">Other Group</option>
+                        </select>
+                    </div>
 
                 </div>
 
-                <!-- Checkpoint labels -->
-                <ul>
-                    <li>
-                        <strong>1</strong>
-                        <p>Details</p>
-                    </li>
-
-                     <li>
-                          <strong>2</strong>
-                          <p>Course</p>
-                    </li>
-
-                    <li>
-                            <strong>3</strong>
-                            <p>Review &amp; Calculate</p>
-                     </li>
-                </ul>
-            </div>
-        </section>
-
-        <form action="#" method="post">
-
-            <!-- Personal details-->
-            <fieldset id="personal-details">
-                <legend>1. Personal Details</legend>
-
-                <p>Enter your details so we can contact you about your booking.</p>
-
-                <p>
-                    <label for="full-name">Full Name:</label><br>
-                    <input type="text" id="full-name"
-                           name="full-name" required>
-                </p>
-
-                <p>
-                    <label for="phone">Phone Number:</label><br>
-                    <input type="tel" id="phone"
-                           name="phone" required>
-                </p>
-
-                <p>
-                    <label for="email">Email Address:</label><br>
-                    <input type="email" id="email"
-                           name="email" required>
-                </p>
-
-                <p>
-                    <label for="booking-type">Booking Type:</label><br>
-                    <select id="booking-type" name="booking-type" required>
-                        <option value="">Choose your booking type</option>
-                        <option value="individual">Individual</option>
-                        <option value="family">Family</option>
-                        <option value="school">School</option>
-                        <option value="gaming-club">Gaming Club</option>
-                        <option value="business">Business / Corporate</option>
-                        <option value="other">Other Group</option>
-                    </select>
-                </p>
-
-                <p>
+                <div class="consultant-option">
                     <input type="checkbox" id="consultant"
                            name="consultant" value="yes">
                     <label for="consultant">
-                        I would like a consultant to contact me.
+                        I would like a consultant to contact me
                     </label>
-                </p>
+                </div>
 
-                <button type="button">
-                    NEXT 
-                </button>
-            </fieldset>
+                <div class="step-buttons">
+                    <button type="button" class="next-button" id="next-step-1">
+                        NEXT →
+                    </button>
+                </div>
 
-            <!-- Select packages and experiences -->
-            <fieldset id="select-course">
-                <legend>2 Select Course</legend>
-                <p>Choose the gaming package and/or experience you would like to book.</p>
+            </section>
 
-                <h3>Gaming Packages</h3>
-                <p>
-                    <input type="checkbox" id="ultimate"
-                           name="offerings" value="ultimate">
-                    <label for="ultimate">Ultimate Gamer Pass - R 1 500</label>
-                </p>
+            <!-- STEP 2: SELECT PACKAGES AND EXPERIENCES -->
+            <section class="fee-step" id="select-course" hidden>
 
-                <p>
-                    <input type="checkbox" id="vip"
-                           name="offerings" value="vip">
-                    <label for="vip">VIP Gaming Experience - R 1 500</label>
-                </p>
+                <div class="step-heading">
+                    <span>2</span>
+                    <div>
+                        <h2>Select course</h2>
+                        <p>Choose the gaming package and/or experience you would like to book.</p>
+                    </div>
+                </div>
 
-                <p>
-                    <input type="checkbox" id="esports"
-                           name="offerings" value="esports">
-                    <label for="esports">Esports Training Package - R 1 500</label>
-                </p>
+                <div class="course-selection-grid">
 
-                <p>
-                    <input type="checkbox" id="birthday"
-                           name="offerings" value="birthday">
-                    <label for="birthday">Birthday Party Package - R 1 500</label>
-                </p>
+                    <!-- Gaming Packages -->
+                    <div class="course-category">
+                        <h3>Gaming Packages</h3>
 
-                <h3>Individual Experiences</h3>
+                        <label class="course-option" for="ultimate">
+                            <input type="checkbox" id="ultimate"
+                                   name="offerings" value="ultimate"
+                                   data-name="Ultimate Gamer Pass" data-price="1500">
+                            <span>Ultimate Gamer Pass</span>
+                            <strong>R1 500</strong>
+                        </label>
 
-                <p>
-                    <input type="checkbox" id="vr"
-                           name="offerings" value="vr">
-                    <label for="vr">Virtual Reality Experience - R 750</label>
-                </p>
+                        <label class="course-option" for="vip">
+                            <input type="checkbox" id="vip"
+                                   name="offerings" value="vip"
+                                   data-name="VIP Gaming Experience" data-price="1500">
+                            <span>VIP Gaming</span>
+                            <strong>R1 500</strong>
+                        </label>
 
-                <p>
-                    <input type="checkbox" id="racing"
-                           name="offerings" value="racing">
-                    <label for="racing">Racing Simulator Challenge - R 750</label>
-                </p>
+                        <label class="course-option" for="esports">
+                            <input type="checkbox" id="esports"
+                                   name="offerings" value="esports"
+                                   data-name="Esports Training Package" data-price="1500">
+                            <span>Esports Training</span>
+                            <strong>R1 500</strong>
+                        </label>
 
-                <p>
-                    <input type="checkbox" id="escape"
-                           name="offerings" value="escape">
-                    <label for="escape">Escape Room Challenge - R 750</label>
-                </p>
+                        <label class="course-option" for="birthday">
+                            <input type="checkbox" id="birthday"
+                                   name="offerings" value="birthday"
+                                   data-name="Birthday Party Package" data-price="1500">
+                            <span>Birthday Party</span>
+                            <strong>R1 500</strong>
+                        </label>
 
-                <!-- Back and Next buttons -->
-                <button type="button">
-                    BACK
-                </button>
+                    </div>
 
-                <button type="button">
-                    NEXT
-                </button>
-            </fieldset>
+                    <!-- Individual Experiences -->
+                    <div class="course-category">
+                        <h3>Individual Experience</h3>
 
-            <!--Review and calculate total fees -->
-            <fieldset id="total-quote">
-                <legend>3. Review &amp; Calculate</legend>
+                        <label class="course-option" for="vr">
+                            <input type="checkbox" id="vr"
+                                   name="offerings" value="vr"
+                                   data-name="Virtual Reality Experience" data-price="750">
+                            <span>Visual Reality</span>
+                            <strong>R750</strong>
+                        </label>
 
-                <p>
-                    Number of selected packages:
-                    <output id="selected-count">0</output>
-                </p>
+                        <label class="course-option" for="racing">
+                            <input type="checkbox" id="racing"
+                                   name="offerings" value="racing"
+                                   data-name="Racing Simulator Challenge" data-price="750">
+                            <span>Racing Simulator</span>
+                            <strong>R750</strong>
+                        </label>
 
-                <p>
-                    Subtotal:
-                    <output id="subtotal">R 0.00</output>
-                </p>
+                        <label class="course-option" for="escape">
+                            <input type="checkbox" id="escape"
+                                   name="offerings" value="escape"
+                                   data-name="Escape Room Challenge" data-price="750">
+                            <span>Escape Room</span>
+                            <strong>R750</strong>
+                        </label>
 
-                <p>
-                    Discount:
-                    <output id="discount">R 0.00</output>
-                </p>
+                    </div>
 
-                <p>
-                    VAT (15%):
-                    <output id="vat">R 0.00</output>
-                </p>
+                </div>
 
-                <p>
-                    <strong>
-                        TOTAL QUOTED FEE:
-                        <output id="total">R 0.00</output>
-                    </strong>
-                </p>
+                <div class="step-buttons">
+                    <button type="button" class="back-button" id="back-step-2">
+                        ← BACK
+                    </button>
 
-                <!-- Back button -->
-                <button type="button">
-                    BACK
-                </button>
+                    <button type="button" class="next-button" id="next-step-2">
+                        NEXT →
+                    </button>
+                </div>
 
-                <!-- Calculate button -->
-                <button type="button">
+            </section>
+
+            <!-- STEP 3: TOTAL QUOTE -->
+            <section class="fee-step" id="total-quote" hidden>
+
+                <div class="step-heading">
+                    <span>3</span>
+                    <div>
+                        <h2>Total Quote</h2>
+                    </div>
+                </div>
+
+                <div class="quote-table">
+
+                    <div class="quote-row">
+                        <span>Number of selected packages</span>
+                        <output id="selected-count">0</output>
+                    </div>
+
+                    <div class="quote-row">
+                        <span>Subtotal</span>
+                        <output id="subtotal">R0.00</output>
+                    </div>
+
+                    <div class="quote-row">
+                        <span>Discount</span>
+                        <output id="discount">R0.00</output>
+                    </div>
+
+                    <div class="quote-row">
+                        <span>VAT (15%)</span>
+                        <output id="vat">R0.00</output>
+                    </div>
+
+                    <div class="quote-row quote-total">
+                        <strong>TOTAL QUOTED FEE</strong>
+                        <output id="total">R0.00</output>
+                    </div>
+
+                </div>
+
+                <button type="button" class="calculate-button" id="calculate">
                     CALCULATE
                 </button>
 
-                <!-- Submit request button -->
-                <button type="submit">
-                    SUBMIT REQUEST
-                </button>
-            </fieldset>
+                <div class="step-buttons">
+
+                    <button type="button" class="back-button" id="back-step-3">
+                        ← BACK
+                    </button>
+
+                    <button type="submit" class="submit-button">
+                        SUBMIT REQUEST
+                    </button>
+
+                </div>
+
+            </section>
 
         </form>
 
     </main>
 
-    <!-- Footer -->
+<!-- Shared Footer -->
     <footer>
-        <section>
+        <div class="footer-brand">
             <h2>NEXT LEVEL</h2>
-            <p>GAMING &amp; ESPORTS ARENA</p>
-        </section>
+            <p>GAMING & ESPORTS ARENA</p>
+        </div>
 
-        <section>
+        <div class="footer-socials">
             <a href="#">Facebook</a>
             <a href="#">Instagram</a>
             <a href="#">TikTok</a>
-        </section>
+        </div>
 
-        <p>Johannesburg &bull; Established 2023</p>
+        <div class="footer-location">
+            <p>Johannesburg &nbsp; • &nbsp; Established 2023</p>
+        </div>
     </footer>
 
 </body>
 </html>
-
