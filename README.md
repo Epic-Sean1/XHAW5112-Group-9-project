@@ -1,76 +1,107 @@
-#  Next Level Gaming & Esports Arena | XHAW5112 Group 9 Project
+# Next Level Gaming & Esports Arena | XHAW5112 Group 9 Project
 
-##  Welcome Note from the Team
-Hello everyone and welcome to our official project repository! This workspace contains all the hard work, planning, wireframes, mobile app code, and website development we’ve put together for **Task 2**. We collaborated closely across different phases to bring the **Next Level Gaming & Esports Arena** concept to life.
+## Welcome Note from the Team
 
----
+Hello everyone and welcome to our official project repository!
 
-##  About the App & System Overview
-Next Level Gaming & Esports Arena is a cross-platform and Flutter-based solution that introduces users to the arena's gaming packages and individual gaming experiences. It also provides a seamless way to estimate fees, view pricing quotes, and find essential business and location information.
+This repository contains the planning, UI/UX designs, mobile application development and website development completed by Group 9 for Task 2.
 
-### **Main Functions**
-* **Home:** The main screen for navigating the app.
-* **Gaming Packages:** Browse the available premium gaming and event packages.
-* **Individual Experiences:** Explore specialized activities such as Virtual Reality, Racing Simulator, and Escape Room.
-* **Fees / Get a Quote:** Select the gaming packages and individual experiences you want. Choose Request Quote to display a personalized quote based on your selections.
-* **More:** Open the About Us, Contact Us, and additional informational screens.
+We collaborated across different project phases to bring the **Next Level Gaming & Esports Arena** concept to life.
 
 ---
 
-##  Project Phases & Structure
-Our project is structured into three core phases to deliver a complete digital and interactive experience:
+## About the Project
+
+Next Level Gaming & Esports Arena is a gaming and esports platform designed to showcase gaming packages, individual gaming experiences and relevant business information.
+
+The project includes UI/UX wireframes and prototypes, mobile application development and a website that allows visitors to explore gaming options, view pricing and request a booking quote.
+
+### Main Website Features
+
+- **Home:** Introduces visitors to the Next Level Gaming & Esports Arena.
+- **About Us:** Provides information about the arena, including its mission, vision and goals.
+- **Gaming Packages:** Allows visitors to explore the available gaming packages.
+- **Experiences:** Showcases individual activities such as Virtual Reality, Racing Simulator and Escape Room.
+- **Fees:** Allows visitors to select packages and experiences, calculate fees and view a pricing breakdown.
+- **Contact Us:** Provides contact information and a form for visitors to submit enquiries.
+
+---
+
+## Project Phases & Structure
+
+Our project is structured into three main phases:
 
 1. **Phase 1: UI/UX Wireframes & Prototypes (Figma)**
-   * Designed high-fidelity, dark-themed interfaces tailored for a futuristic gaming lounge.
-   * Created comprehensive user flows covering all core sections and bookings.
+   - Designed high-fidelity interfaces for a modern gaming and esports experience.
+   - Created user flows covering the main sections and booking processes.
 
 2. **Phase 2: Mobile Application Development**
-   * Implemented fully functional mobile app structures and code aligned with our Figma wireframes.
-   * Integrated smooth navigation, clean component layouts, and dynamic views for mobile users.
+   - Developed the mobile application structure and functionality using Flutter.
+   - Implemented navigation and screens based on the project designs.
 
-3. **Phase 3: Website HTML Structure**
-   * Developed clean, structured, and modular HTML pages for the official web platform (`index.html`, `about.html`, `packages.html`, `contact.html`, and detailed package subpages).
-
----
-
-##  How to Use & Access
-* **Web App Access:** The application is published and live as a web app on Netlify: [https://nextlevelgaming0.netlify.app/](https://nextlevelgaming0.netlify.app/)
-* **Navigation Steps:**
-  1. Open the app using the provided Netlify website link.
-  2. Use the bottom navigation bar to move seamlessly between Home, Packages, Individual Experiences, Fees, and More.
-  3. Open **Packages** or **Individual Experiences** to browse available options.
-  4. Open **Fees** to select the items you want included in your quote.
-  5. Select **Request Quote** to view the calculated price breakdown.
-  6. Use **More** to read About Us information or view direct Contact Us details.
+3. **Phase 3: Website Development**
+   - Developed the website using HTML, CSS and JavaScript.
+   - Created individual pages for gaming packages and experiences.
+   - Implemented interactive features, including form validation and fee calculations.
+   - Designed a responsive layout for different screen sizes.
 
 ---
 
-##  Repository Directory Structure
-* **`website/`** — Complete HTML pages and web layout structure
+## How to Access the Website
+
+**Live Website:** https://gaming-and-esport-arena.netlify.app/
+
+### Navigation Steps
+
+1. Open the website using the link above.
+2. Use the navigation menu at the top of the page to explore the different sections.
+3. Select **Gaming Packages** to browse the available packages.
+4. Select **Experiences** to explore individual gaming activities.
+5. Open **Fees** to select packages and experiences and calculate an estimated quote.
+6. Visit **About Us** to learn more about the arena.
+7. Open **Contact Us** to view contact details and try the contact form.
+
+---
+
+## Repository Directory Structure
+
+* **`Next_Level_Gaming_Website/`** — Complete website source code, including HTML pages, styling, scripts and images.
   * `index.html` — Main landing page
-  * `about.html` — Company history, mission, vision, and goals
-  * `packages.html` — Main gaming packages overview
-  * `contact.html` — Contact form and location details
-  * `*.html` — Specialized pages (VIP, VR, Racing, Escape Room, etc.)
-* **`mobile-app/`** — Source code and components for the mobile application
-  * `lib/`
-  * `android/ & ios/`
-  * `pubspec.yaml`
-* **`README.md`** — Project documentation and team details
+  * `about.html` — About page with the mission, vision and goals
+  * `packages.html` — Gaming packages overview
+  * `experiences.html` — Gaming experiences overview
+  * `fees.html` — Booking and fee calculation
+  * `contact.html` — Contact information and contact form
+  * `ultimate_gamer_pass.html` — Ultimate Gamer Pass details
+  * `vip_gaming_experience.html` — VIP gaming experience details
+  * `esports_training.html` — Esports training details
+  * `birthday_party.html` — Birthday party experience details
+  * `vr_experience.html` — VR experience details
+  * `racing_simulator.html` — Racing simulator details
+  * `escape_room.html` — Escape room details
+  * `style.css` — Website styling and responsive layout
+  * `script.js` — JavaScript functionality and form validation
+  * `images/` — Website images and visual assets
+
+* **`README.md`** — Project documentation and team details.
 
 ---
 
-##  Group 9 Members & Contributions
+## Group 9 Members & Contributions
+
 Great teamwork makes the dream work! Here is our team breakdown:
-* **Enoc Chilala** (`Enoc03`) — Mobile application setup, core logic implementation, and code integration.
-* **Moeketsi Nteo** (`MoeketsiNteo`) — UI/UX Figma wireframing, prototyping, and website HTML structure development.
-* **Ethar Aboyounes** (`etharyounes`) — Project documentation, repository organization, structuring the README, and technical insights.
-* **Team Leader** (`Epic-Sean1`) — Overall repository architecture, task coordination, and final integration.
+
+- **Enoc Chilala** (`Enoc03`) — Mobile application setup, core logic implementation and code integration.
+- **Moeketsi Nteo** (`MoeketsiNteo`) — UI/UX Figma wireframing, prototyping and website HTML structure development.
+- **Ethar Aboyounes** (`etharyounes`) — Project documentation, repository organization, README structuring and technical insights.
+- **Team Leader** (`Epic-Sean1`) — Overall repository architecture, task coordination and final integration.
 
 ---
 
-##  Note on Version
-*This README describes the intended app functions. Any booking, contact, or quote-submission actions that are placeholders in the current version may not send information to a live business system yet.*
+## Note on Functionality
+
+This README describes the intended project features. The website includes interactive functionality such as fee calculations and contact form validation. However, booking requests, contact submissions and quote requests are not connected to a live business management system.
 
 ---
-*Thank you for checking out our project! Feel free to explore the code and design files.*
+
+Thank you for checking out our project! Feel free to explore the code and design files.
