@@ -1842,3 +1842,47 @@ footer a:hover {
         padding: 12px 20px;
     }
 }
+
+/*----------BOOKING SUBMISSION CONFIRMATION----------*/
+
+.submission-message {
+    background-color: #f4efff;
+    border: 2px solid #51249a;
+    border-radius: 12px;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 750px;
+    text-align: center;
+}
+
+.submission-message h2 {
+    font-family: 'Jersey 15', sans-serif;
+    font-size: 42px;
+    color: #51249a;
+    margin-bottom: 20px;
+}
+
+.submission-message p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #292044;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+@media (max-width: 600px) {
+
+    .submission-message {
+        padding: 25px 18px;
+        margin: 25px 10px;
+    }
+
+    .submission-message h2 {
+        font-size: 32px;
+    }
+
+    .submission-message p {
+        font-size: 14px;
+    }
+
+}
