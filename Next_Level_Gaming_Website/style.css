@@ -544,10 +544,6 @@ footer a:hover {
     margin: 0;
 }
 
-    background-color: #51249a;
-    color: #fff;
-}
-
 /*----------PACKAGE DETAIL PAGES----------*/
 .package-detail-page {
     min-height: calc(100vh - 110px);
