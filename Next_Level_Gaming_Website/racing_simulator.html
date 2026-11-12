@@ -5,49 +5,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Racing Simulator Challenge | Next Level Gaming</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header: logo and main navigation -->
-    <header>
 
-        <!-- Website logo -->
+<!-- Shared Header and Navigation -->
+    <header>
         <a href="index.html">
             <img src="images/logo.jpg"
                  alt="Next Level Gaming and Esports Arena Logo"
                  width="110">
         </a>
 
-        <!-- Links to the other website pages -->
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="packages.html">Gaming Packages</a>
-            <a href="experiences.html">Experiences</a>
+            <a href="experiences.html" class="active">Experiences</a>
             <a href="fees.html">Fees</a>
             <a href="contact.html">Contact</a>
         </nav>
-
     </header>
 
-    <main>
-        <h1>RACING SIMULATOR CHALLENGE</h1>
-        <p>Feel the speed, beat the track</p>
-        <p>Race on professional driving simulators and take on friends or climb the leader board</p>
-        <h2>R750</h2>
+<!-- Racing Simulator Challenge Details -->
+    <main class="package-detail-page">
 
-        <h2>INCLUDES:</h2>
-        <ul>
-            <li>Racing simulator</li>
-            <li>Choice of tracks</li>
-            <li>Leaderboard competition</li>
-            <li>Team challenges</li>
-        </ul>
+        <section class="package-detail-heading">
+            <h1>RACING SIMULATOR CHALLENGE</h1>
+            <p>Feel the speed, beat the track</p>
+        </section>
 
-        <p><a href="experiences.html">BACK</a></p>
-        <p><a href="fees.html">BOOK NOW</a></p>
+        <section class="package-detail-content">
+
+            <div class="package-detail-info">
+
+                <p class="package-description">
+                    Race on professional driving simulators and take
+                    on friends or climb the leader board.
+                </p>
+
+                <h2>Includes:</h2>
+
+                <ul>
+                    <li>Racing simulator</li>
+                    <li>Choice of tracks</li>
+                    <li>Leaderboard competition</li>
+                    <li>Team challenges</li>
+                </ul>
+
+            </div>
+
+            <div class="package-detail-visual">
+
+                <div class="package-detail-price">
+                    <strong>R750</strong>
+                    <p>Package fee</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <div class="package-detail-actions">
+            <a href="experiences.html" class="detail-back-button">← BACK</a>
+            <a href="fees.html" class="detail-book-button">BOOK NOW</a>
+        </div>
 
     </main>
 
-    <footer><p>Next Level Gaming &amp; Esports Arena</p></footer>
+<!-- Shared Footer -->
+    <footer>
+        <div class="footer-brand">
+            <h2>NEXT LEVEL</h2>
+            <p>GAMING & ESPORTS ARENA</p>
+        </div>
+
+        <div class="footer-socials">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+        </div>
+
+        <div class="footer-location">
+            <p>Johannesburg &nbsp; • &nbsp; Established 2023</p>
+        </div>
+    </footer>
+
 </body>
 </html>
