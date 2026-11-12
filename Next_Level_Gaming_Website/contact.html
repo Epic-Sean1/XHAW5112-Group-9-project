@@ -100,7 +100,7 @@
             <!--Contact Form-->
             <div class="contact-form-container">
 
-                <form action="#" method="post">
+                <form id="contact-form" novalidate>
 
                     <!--Name-->
                     <div class="contact-form-group">
@@ -112,6 +112,7 @@
                             name="name"
                             placeholder="Enter name"
                             required>
+                            <small class="contact-error" id="name-error"></small>
                     </div>
 
                     <!--Email-->
@@ -124,6 +125,7 @@
                             name="email"
                             placeholder="Enter email address"
                             required>
+                            <small class="contact-error" id="email-error"></small>
                     </div>
 
                     <!--Message-->
@@ -136,10 +138,12 @@
                             rows="5"
                             placeholder="Type your message here"
                             required></textarea>
+                            <small class="contact-error" id="message-error"></small>
                     </div>
 
                     <!--Submit Button-->
                     <button type="submit">SEND MESSAGE</button>
+                    <p id="contact-success" class="contact-success" hidden>Thank you! Your message has been submitted successfully.</p>
 
                 </form>
 
@@ -168,6 +172,9 @@
         </section>
 
     </footer>
+
+    <!--Linking JavaScript-->
+    <script src="script.js"></script>
 
 </body>
 </html>

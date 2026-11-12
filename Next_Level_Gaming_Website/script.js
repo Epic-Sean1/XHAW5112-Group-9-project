@@ -1,6 +1,7 @@
 
 /*----------FEES PAGE JAVASCRIPT----------*/
 
+if (document.getElementById("fees-form")) {
 
 /*----------GET PAGE ELEMENTS----------*/
 
@@ -512,6 +513,75 @@ feesForm.addEventListener("submit", function (event) {
     });
 
 });
+}
+
+/*----------CONTACT FORM VALIDATION----------*/
+
+const contactForm = document.getElementById("contact-form");
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        // Get form fields
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const message = document.getElementById("message");
+
+        // Get validation messages
+        const nameError = document.getElementById("name-error");
+        const emailError = document.getElementById("email-error");
+        const messageError = document.getElementById("message-error");
+        const successMessage = document.getElementById("contact-success");
+
+        let valid = true;
+
+        // Clear previous messages
+        nameError.textContent = "";
+        emailError.textContent = "";
+        messageError.textContent = "";
+        successMessage.hidden = true;
+
+        // Validate name
+        if (name.value.trim() === "") {
+            nameError.textContent = "Please enter your name.";
+            valid = false;
+        }
+
+        // Validate email
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (email.value.trim() === "") {
+            emailError.textContent = "Please enter your email address.";
+            valid = false;
+        } else if (!emailPattern.test(email.value.trim())) {
+            emailError.textContent = "Please enter a valid email address.";
+            valid = false;
+        }
+
+        // Validate message
+        if (message.value.trim() === "") {
+            messageError.textContent = "Please enter your message.";
+            valid = false;
+        }
+
+        // Stop if the form is invalid
+        if (!valid) {
+            return;
+        }
+
+        // Show confirmation message
+        successMessage.hidden = false;
+
+        // Clear the form
+        contactForm.reset();
+
+    });
+
+}
+
 
 
 
